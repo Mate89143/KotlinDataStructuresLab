@@ -32,3 +32,23 @@ fun reto2() {
     println("Senior (>30 años): $seniors")
     println()
 }
+
+// === RETO 3 ===
+// Limpieza de Contactos Duplicados
+fun reto3() {
+    val telefonos = listOf("123", "456", "123", "789", "456", "000", "111", "222", "333", "444", "555", "666", "777", "888", "999", "123", "456", "789", "000", "111")
+    val unicos = telefonos.toSet().toMutableList()
+    for (i in 0 until unicos.size - 1) {
+        for (j in i + 1 until unicos.size) {
+            if (unicos[i] > unicos[j]) {
+                val temp = unicos[i]
+                unicos[i] = unicos[j]
+                unicos[j] = temp
+            }
+        }
+    }
+    println("=== RETO 3 ===")
+    println("Teléfonos originales (20): ${telefonos.joinToString()}")
+    println("Únicos ordenados: $unicos")
+    println()
+}
