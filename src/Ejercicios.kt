@@ -95,3 +95,29 @@ fun reto6() {
     println("Exclusivos míos: $exclusivosYo")
     println()
 }
+
+// === RETO 7 ===
+// Inventario de Despensa
+fun reto7() {
+    val inventario = mutableMapOf("arroz" to 5, "frijoles" to 3, "aceite" to 2, "sal" to 1)
+    fun consumir(producto: String, cantidad: Int): String {
+        if (!inventario.containsKey(producto)) return "Producto no existe"
+        val actual = inventario[producto]!!
+        if (actual < cantidad) return "Stock insuficiente"
+        val nuevo = actual - cantidad
+        if (nuevo == 0) {
+            inventario.remove(producto)
+            return "Producto $producto agotado, eliminado del inventario"
+        } else {
+            inventario[producto] = nuevo
+            return "Consumido $cantidad de $producto, quedan $nuevo"
+        }
+    }
+    println("=== RETO 7 ===")
+    println("Inventario inicial: $inventario")
+    println(consumir("arroz", 2))
+    println(consumir("sal", 1))
+    println(consumir("aceite", 3))
+    println("Inventario final: ${inventario.toMap()}")
+    println()
+}
