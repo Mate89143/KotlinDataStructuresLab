@@ -52,3 +52,17 @@ fun reto3() {
     println("Únicos ordenados: $unicos")
     println()
 }
+
+// === RETO 4 ===
+// Análisis de Carrito de Compras
+fun reto4() {
+    val carrito = listOf("manzana", "pera", "manzana", "pera", "pera", "uva", "manzana", "sandía")
+    val unidades = mutableMapOf<String, Int>()
+    for (producto in carrito) {
+        unidades[producto] = unidades.getOrDefault(producto, 0) + 1
+    }
+    println("=== RETO 4 ===")
+    println("Carrito: $carrito")
+    println("Unidades por producto: $unidades")
+    println()
+}
