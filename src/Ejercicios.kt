@@ -66,3 +66,17 @@ fun reto4() {
     println("Unidades por producto: $unidades")
     println()
 }
+
+// === RETO 5 ===
+// Historial de Navegación Reversible
+fun reto5() {
+    val urls = arrayOf("google.com", "youtube.com", "github.com", "stackoverflow.com", "kotlinlang.org")
+    val invertido = Array(urls.size) { "" }
+    for (i in urls.indices) {
+        invertido[i] = urls[urls.size - 1 - i]
+    }
+    println("=== RETO 5 ===")
+    println("Original: ${urls.joinToString()}")
+    println("Invertido: ${invertido.joinToString()}")
+    println()
+}
