@@ -19,3 +19,16 @@ fun reto1() {
     println()
 }
 
+// === RETO 2 ===
+// Filtro de Empleados Senior
+fun reto2() {
+    val empleados = listOf("Ana" to 25, "Luis" to 35, "Marta" to 40, "Javi" to 28, "Carmen" to 45)
+    val seniors = mutableListOf<String>()
+    for ((nombre, edad) in empleados) {
+        if (edad > 30) seniors.add(nombre.uppercase())
+    }
+    println("=== RETO 2 ===")
+    println("Empleados: $empleados")
+    println("Senior (>30 años): $seniors")
+    println()
+}
