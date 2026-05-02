@@ -484,3 +484,23 @@ fun reto26() {
     println("Comprimido: $comprimido")
     println()
 }
+
+// === RETO 27 ===
+// Premios a Vendedores
+fun reto27() {
+    val ventas = mapOf("Ana" to 1500.0, "Luis" to 2300.0, "Marta" to 1800.0, "Javi" to 2100.0, "Carmen" to 1900.0)
+    if (ventas.isNotEmpty()) {
+        var suma = 0.0
+        for (v in ventas.values) suma += v
+        val promedio = suma / ventas.size
+        val ganadores = mutableListOf<String>()
+        for ((nombre, venta) in ventas) {
+            if (venta > promedio) ganadores.add(nombre)
+        }
+        println("=== RETO 27 ===")
+        println("Ventas: $ventas")
+        println("Promedio del equipo: $promedio")
+        println("Vendedores con bono: $ganadores")
+    }
+    println()
+}
