@@ -135,3 +135,15 @@ fun reto8() {
     println("Nota final: $suma")
     println()
 }
+
+// === RETO 9 ===
+// Traductor de Códigos de País
+fun reto9() {
+    val codigos = mapOf("CO" to "Colombia", "US" to "Estados Unidos", "MX" to "México", "ES" to "España")
+    println("=== RETO 9 ===")
+    for ((codigo, pais) in codigos) {
+        println("El código $codigo pertenece a $pais")
+    }
+    println()
+}
+

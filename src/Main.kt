@@ -8,5 +8,7 @@ fun main() {
     reto5()
     reto6()
     reto7()
+    reto8()
+    reto9()
     println("FIN DEL TALLER")
 }
