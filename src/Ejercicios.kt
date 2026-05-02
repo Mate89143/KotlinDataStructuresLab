@@ -264,3 +264,26 @@ fun reto16() {
     println()
 }
 
+// === RETO 17 ===
+// Mapa de Almacén (Matriz)
+fun reto17() {
+    val almacen = arrayOf(
+        arrayOf(1, 2, 3, 4),
+        arrayOf(5, 6, 7, 8),
+        arrayOf(9, 10, 11, 12),
+        arrayOf(13, 14, 15, 16)
+    )
+    var diagPrincipal = 0
+    var diagSecundaria = 0
+    val n = 4
+    for (i in 0 until n) {
+        diagPrincipal += almacen[i][i]
+        diagSecundaria += almacen[i][n - 1 - i]
+    }
+    println("=== RETO 17 ===")
+    println("Matriz 4x4:")
+    for (fila in almacen) println(fila.joinToString())
+    println("Suma diagonal principal: $diagPrincipal")
+    println("Suma diagonal secundaria: $diagSecundaria")
+    println()
+}
