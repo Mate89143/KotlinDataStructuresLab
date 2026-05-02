@@ -413,7 +413,7 @@ fun reto23() {
 }
 
 // === RETO 24 ===
-// Organización de Contenedores: balanceo de paréntesis, corchetes y llaves.
+// Organización de Contenedores
 fun reto24() {
     fun estaBalanceado(manifiesto: String): Boolean {
         val pila = mutableListOf<Char>()
