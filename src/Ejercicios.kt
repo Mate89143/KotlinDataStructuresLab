@@ -121,3 +121,17 @@ fun reto7() {
     println("Inventario final: ${inventario.toMap()}")
     println()
 }
+
+// === RETO 8 ===
+// Cálculo de Promedio Académico
+fun reto8() {
+    val notas = listOf(4.5 to 0.3, 3.8 to 0.2, 5.0 to 0.5)
+    var suma = 0.0
+    for ((nota, peso) in notas) {
+        suma += nota * peso
+    }
+    println("=== RETO 8 ===")
+    println("Notas y pesos: $notas")
+    println("Nota final: $suma")
+    println()
+}
