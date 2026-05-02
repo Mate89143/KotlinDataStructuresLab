@@ -199,4 +199,23 @@ fun reto12() {
     println()
 }
 
+// === RETO 13 ===
+// Reparto de Pedidos por Camión
+fun reto13() {
+    val paquetes = (1..50).toList() // 50 paquetes con IDs del 1 al 50
+    val lotes = mutableListOf<List<Int>>()
+    var i = 0
+    while (i < paquetes.size) {
+        val fin = minOf(i + 10, paquetes.size)
+        lotes.add(paquetes.subList(i, fin))
+        i += 10
+    }
+    println("=== RETO 13 ===")
+    println("Total paquetes: ${paquetes.size}")
+    println("Lotes de 10: ${lotes.size} lotes")
+    println("Primer lote: ${lotes[0]}")
+    println("Último lote: ${lotes.last()}")
+    println()
+}
+
 
