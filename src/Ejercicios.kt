@@ -504,3 +504,18 @@ fun reto27() {
     }
     println()
 }
+
+// === RETO 28 ===
+// Calculadora de Tarifas de Parking
+fun reto28() {
+    val tarifas = mapOf(
+        1 to 1000, 2 to 2000, 3 to 3000, 4 to 4000, 5 to 5000,
+        6 to 6000, 7 to 7000, 8 to 8000, 9 to 9000, 10 to 10000
+    )
+    fun costo(horas: Int): Int? = tarifas[horas]
+    println("=== RETO 28 ===")
+    println("Tarifas por hora: $tarifas")
+    println("Costo por 3 horas: ${costo(3)}")
+    println("Costo por 7 horas: ${costo(7)}")
+    println()
+}
