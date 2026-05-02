@@ -349,3 +349,22 @@ fun reto20() {
     println("Unión ordenada: $resultado")
     println()
 }
+
+// === RETO 21 ===
+// Días de Mantenimiento (Primos)
+fun reto21() {
+    fun esPrimo(n: Int): Boolean {
+        if (n < 2) return false
+        for (i in 2..Math.sqrt(n.toDouble()).toInt()) {
+            if (n % i == 0) return false
+        }
+        return true
+    }
+    val primos = ArrayList<Int>()
+    for (piso in 1..100) {
+        if (esPrimo(piso)) primos.add(piso)
+    }
+    println("=== RETO 21 ===")
+    println("Pisos con mantenimiento especial (primos 1..100): $primos")
+    println()
+}
