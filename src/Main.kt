@@ -12,5 +12,6 @@ fun main() {
     reto9()
     reto10()
     reto11()
+    reto12()
     println("FIN DEL TALLER")
 }

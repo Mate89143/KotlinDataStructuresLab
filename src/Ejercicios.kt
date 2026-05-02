@@ -182,4 +182,21 @@ fun reto11() {
     println()
 }
 
+// === RETO 12 ===
+// Verificador de Ruta Reversible
+fun reto12() {
+    val ruta1 = listOf("A1", "B2", "C3", "B2", "A1")
+    val ruta2 = listOf("X1", "Y2", "Z3", "W4")
+    fun esEspejo(coordenadas: List<String>): Boolean {
+        for (i in 0 until coordenadas.size / 2) {
+            if (coordenadas[i] != coordenadas[coordenadas.size - 1 - i]) return false
+        }
+        return true
+    }
+    println("=== RETO 12 ===")
+    println("Ruta 1: $ruta1 -> ¿Es espejo? ${esEspejo(ruta1)}")
+    println("Ruta 2: $ruta2 -> ¿Es espejo? ${esEspejo(ruta2)}")
+    println()
+}
+
 
