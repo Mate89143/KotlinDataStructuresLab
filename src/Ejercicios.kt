@@ -390,3 +390,24 @@ fun reto22() {
     println("Pila final: ${pila.verPila()}")
     println()
 }
+
+// === RETO 23 ===
+// Seguimiento de Dieta
+fun reto23() {
+    val calorias = listOf(2000, 2100, 1900, 2200, 2050, 1950, 2300)
+    val diferencias = mutableListOf<Double>()
+    for (i in calorias.indices) {
+        if (i == 0) {
+            diferencias.add(0.0)
+        } else {
+            var suma = 0
+            for (j in 0 until i) suma += calorias[j]
+            val promedio = suma.toDouble() / i
+            diferencias.add(calorias[i] - promedio)
+        }
+    }
+    println("=== RETO 23 ===")
+    println("Calorías diarias: $calorias")
+    println("Diferencia con promedio anterior: $diferencias")
+    println()
+}
