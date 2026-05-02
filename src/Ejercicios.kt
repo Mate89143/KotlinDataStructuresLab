@@ -435,3 +435,28 @@ fun reto24() {
     println()
 }
 
+// === RETO 25 ===
+// Rendimiento de Maratón
+fun reto25() {
+    val tiempos = listOf(120.5, 115.2, 118.0, 122.3, 119.4, 125.1, 117.8)
+    var min = tiempos[0]
+    var max = tiempos[0]
+    for (t in tiempos) {
+        if (t < min) min = t
+        if (t > max) max = t
+    }
+    var suma = 0.0
+    var count = 0
+    for (t in tiempos) {
+        if (t != min && t != max) {
+            suma += t
+            count++
+        }
+    }
+    val promedio = if (count > 0) suma / count else 0.0
+    println("=== RETO 25 ===")
+    println("Tiempos originales: $tiempos")
+    println("Mínimo: $min, Máximo: $max")
+    println("Promedio sin extremos: $promedio")
+    println()
+}
