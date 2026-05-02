@@ -163,4 +163,23 @@ fun reto10() {
     println()
 }
 
+// === RETO 11 ===
+// Organizador de Maleta
+fun reto11() {
+    val objetos = listOf("Camisa" to 0.5, "Zapatos" to 1.2, "Laptop" to 2.5, "Libro" to 0.8, "Balón" to 0.4)
+    val grupos = mutableMapOf<String, MutableList<String>>()
+    for ((nombre, peso) in objetos) {
+        val categoria = when {
+            peso < 1.0 -> "Ligero (<1kg)"
+            peso <= 2.0 -> "Mediano (1-2kg)"
+            else -> "Pesado (>2kg)"
+        }
+        grupos.getOrPut(categoria) { mutableListOf() }.add(nombre)
+    }
+    println("=== RETO 11 ===")
+    println("Objetos: $objetos")
+    println("Agrupados por peso: $grupos")
+    println()
+}
+
 
