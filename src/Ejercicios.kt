@@ -147,3 +147,20 @@ fun reto9() {
     println()
 }
 
+// === RETO 10 ===
+// Rotación de Turnos de Trabajo
+fun reto10() {
+    val empleados = listOf("Ana", "Luis", "Marta", "Javi", "Carmen")
+    val k = 2
+    val n = empleados.size
+    val rotados = mutableListOf<String>()
+    val desplazamiento = k % n
+    for (i in n - desplazamiento until n) rotados.add(empleados[i])
+    for (i in 0 until n - desplazamiento) rotados.add(empleados[i])
+    println("=== RETO 10 ===")
+    println("Empleados originales: $empleados")
+    println("Rotados $k posiciones: $rotados")
+    println()
+}
+
+
