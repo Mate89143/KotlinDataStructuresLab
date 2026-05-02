@@ -411,3 +411,27 @@ fun reto23() {
     println("Diferencia con promedio anterior: $diferencias")
     println()
 }
+
+// === RETO 24 ===
+// Organización de Contenedores: balanceo de paréntesis, corchetes y llaves.
+fun reto24() {
+    fun estaBalanceado(manifiesto: String): Boolean {
+        val pila = mutableListOf<Char>()
+        for (c in manifiesto) {
+            when (c) {
+                '(', '[', '{' -> pila.add(c)
+                ')' -> if (pila.isEmpty() || pila.removeAt(pila.size - 1) != '(') return false
+                ']' -> if (pila.isEmpty() || pila.removeAt(pila.size - 1) != '[') return false
+                '}' -> if (pila.isEmpty() || pila.removeAt(pila.size - 1) != '{') return false
+            }
+        }
+        return pila.isEmpty()
+    }
+    val manifiesto1 = "{[()]}"
+    val manifiesto2 = "{[(])}"
+    println("=== RETO 24 ===")
+    println("Manifiesto '$manifiesto1' -> balanceado: ${estaBalanceado(manifiesto1)}")
+    println("Manifiesto '$manifiesto2' -> balanceado: ${estaBalanceado(manifiesto2)}")
+    println()
+}
+
