@@ -460,3 +460,27 @@ fun reto25() {
     println("Promedio sin extremos: $promedio")
     println()
 }
+
+// === RETO 26 ===
+// Compresión de Logs de Servidor
+fun reto26() {
+    val estados = listOf("UP", "UP", "DOWN", "UP", "UP", "UP", "DOWN", "DOWN")
+    val comprimido = mutableListOf<Pair<String, Int>>()
+    if (estados.isNotEmpty()) {
+        var actual = estados[0]
+        var cont = 1
+        for (i in 1 until estados.size) {
+            if (estados[i] == actual) cont++
+            else {
+                comprimido.add(actual to cont)
+                actual = estados[i]
+                cont = 1
+            }
+        }
+        comprimido.add(actual to cont)
+    }
+    println("=== RETO 26 ===")
+    println("Estados originales: $estados")
+    println("Comprimido: $comprimido")
+    println()
+}
