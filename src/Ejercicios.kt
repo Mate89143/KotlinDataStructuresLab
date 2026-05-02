@@ -519,3 +519,25 @@ fun reto28() {
     println("Costo por 7 horas: ${costo(7)}")
     println()
 }
+
+// === RETO 29 ===
+// Parejas de Viaje por Peso
+fun reto29() {
+    val pesos = listOf(15.5, 20.2, 10.0, 8.5, 12.3, 18.0)
+    val objetivo = 28.5
+    val vistos = mutableSetOf<Double>()
+    var pareja: Pair<Double, Double>? = null
+    for (p in pesos) {
+        val complemento = objetivo - p
+        if (complemento in vistos) {
+            pareja = Pair(p, complemento)
+            break
+        }
+        vistos.add(p)
+    }
+    println("=== RETO 29 ===")
+    println("Pesos: $pesos")
+    println("Objetivo de equilibrio: $objetivo")
+    println("Pareja encontrada: $pareja")
+    println()
+}
