@@ -237,3 +237,16 @@ fun reto14() {
     println()
 }
 
+// === RETO 15 ===
+// Calculadora de IVA Selectiva
+fun reto15() {
+    val precios = listOf(45000.0, 60000.0, 30000.0, 120000.0, 48000.0)
+    val conIva = mutableMapOf<Double, Double>()
+    for (p in precios) {
+        conIva[p] = if (p > 50000) p * 1.19 else p
+    }
+    println("=== RETO 15 ===")
+    println("Precios originales: $precios")
+    println("Precios con IVA selectivo: $conIva")
+    println()
+}
