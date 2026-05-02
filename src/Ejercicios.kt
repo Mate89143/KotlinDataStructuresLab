@@ -218,4 +218,22 @@ fun reto13() {
     println()
 }
 
+// === RETO 14 ===
+// Identificador de Ticket Único
+fun reto14() {
+    val ids = listOf(101, 102, 103, 101, 104, 102, 105, 106, 103, 107)
+    val frecuencias = mutableMapOf<Int, Int>()
+    for (id in ids) frecuencias[id] = frecuencias.getOrDefault(id, 0) + 1
+    var primerUnico: Int? = null
+    for (id in ids) {
+        if (frecuencias[id] == 1) {
+            primerUnico = id
+            break
+        }
+    }
+    println("=== RETO 14 ===")
+    println("IDs: $ids")
+    println("Primer ID único: $primerUnico")
+    println()
+}
 
