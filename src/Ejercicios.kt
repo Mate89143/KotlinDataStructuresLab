@@ -368,3 +368,25 @@ fun reto21() {
     println("Pisos con mantenimiento especial (primos 1..100): $primos")
     println()
 }
+
+// === RETO 22 ===
+// Pila de Platos Sucios
+fun reto22() {
+    class PilaPlatos {
+        private val platos = mutableListOf<String>()
+        fun push(plato: String) = platos.add(plato)
+        fun pop(): String? = if (platos.isNotEmpty()) platos.removeAt(platos.size - 1) else null
+        fun size() = platos.size
+        fun verPila() = platos.toList()
+    }
+    val pila = PilaPlatos()
+    pila.push("Plato 1")
+    pila.push("Plato 2")
+    pila.push("Plato 3")
+    println("=== RETO 22 ===")
+    println("Pila después de pushes: ${pila.verPila()}")
+    println("Pop: ${pila.pop()}")
+    println("Pop: ${pila.pop()}")
+    println("Pila final: ${pila.verPila()}")
+    println()
+}
